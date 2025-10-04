@@ -1,0 +1,668 @@
+# **Lesson 3 Tasks: Text-Level Elements, Images, and Hyperlinks**
+
+## **Setup Instructions**
+
+Before starting these exercises:
+1. Create a new folder called `html-lesson3` on your computer
+2. Create a subfolder called `images` inside it
+3. Open your text editor
+4. Save each exercise as a separate `.html` file
+5. For image exercises, you can use placeholder images or create simple text files named as images
+
+---
+
+## **Task 1: Text-Level Elements Practice**
+
+**Objective:** Use various text-level elements to mark up content.
+
+**Instructions:**
+1. Create a file called `text-elements.html`
+2. Create a page about a book or movie with:
+   - A heading with the title
+   - A paragraph using `<em>` for emphasis
+   - A paragraph using `<strong>` for importance
+   - The title of the work using `<cite>`
+   - A quote using `<q>`
+   - At least one abbreviation using `<abbr>` with a `title` attribute
+
+**Example Structure:**
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Book Review</title>
+</head>
+<body>
+    <h1>Review: [Book Title]</h1>
+    
+    <p>
+        This book is <em>absolutely</em> worth reading. 
+        The most <strong>important</strong> message is...
+    </p>
+    
+    <p>
+        <cite><!-- Book title here --></cite> was written by...
+    </p>
+    
+    <!-- Add more paragraphs with other elements -->
+</body>
+</html>
+```
+
+**Success Criteria:**
+- Uses at least 5 different text-level elements
+- Elements are used appropriately (semantic meaning)
+- Abbreviations have title attributes
+- Page displays correctly with proper formatting
+
+---
+
+## **Task 2: Scientific Document**
+
+**Objective:** Use subscript, superscript, and code elements.
+
+**Instructions:**
+1. Create a file called `science.html`
+2. Create a science reference page with:
+   - A heading "Chemical Formulas and Equations"
+   - A paragraph about water using H<sub>2</sub>O
+   - A paragraph about Einstein's equation E = mc<sup>2</sup>
+   - A section showing how to write HTML code using `<code>` elements
+   - Use character entities to display the HTML tags
+
+**Example:**
+```html
+<section>
+    <h2>Water</h2>
+    <p>
+        The chemical formula for water is H<sub>2</sub>O.
+    </p>
+</section>
+
+<section>
+    <h2>HTML Code</h2>
+    <p>
+        To create a paragraph, use the <code>&lt;p&gt;</code> tag.
+    </p>
+</section>
+```
+
+**Requirements:**
+- At least 3 uses of subscript
+- At least 3 uses of superscript
+- At least 5 code examples showing HTML tags
+- All HTML symbols properly escaped with entities
+
+**Success Criteria:**
+- Subscripts and superscripts display correctly
+- Code examples are readable
+- Character entities work properly
+
+---
+
+## **Task 3: Character Entities**
+
+**Objective:** Practice using character entities for special symbols.
+
+**Instructions:**
+1. Create a file called `symbols.html`
+2. Create a page that uses these character entities:
+   - Copyright symbol (&copy;)
+   - Trademark symbol (&trade;)
+   - Registered symbol (&reg;)
+   - Em dash (&mdash;)
+   - En dash (&ndash;)
+   - Less than and greater than (&lt;, &gt;)
+   - Quote marks (&quot;)
+   - Euro symbol (&euro;)
+
+**Example Section:**
+```html
+<section>
+    <h2>Company Information</h2>
+    <p>
+        TechCorp&reg; &copy; 2025<br />
+        Our ThinkPad&trade; is the best in class.
+    </p>
+</section>
+
+<section>
+    <h2>Pricing</h2>
+    <p>
+        Prices range from &euro;50&ndash;&euro;150
+    </p>
+</section>
+```
+
+**Success Criteria:**
+- Uses at least 8 different character entities
+- Entities display correctly as symbols
+- Appropriate use in context
+
+---
+
+## **Task 4: Line Breaks and Addresses**
+
+**Objective:** Use line breaks appropriately.
+
+**Instructions:**
+1. Create a file called `contact-card.html`
+2. Create a business card style page with:
+   - Company name
+   - Address (use `<br />` for line breaks)
+   - Phone number with proper formatting
+   - Email address
+   - A short tagline
+
+**Example:**
+```html
+<section>
+    <h2>Contact Information</h2>
+    <p>
+        <strong>Acme Corporation</strong><br />
+        123 Business Street<br />
+        Suite 456<br />
+        New York, NY 10001
+    </p>
+    
+    <p>
+        Phone: 212-555-0123<br />
+        Email: info@acme.com
+    </p>
+</section>
+```
+
+**Requirements:**
+- At least 3 uses of `<br />`
+- Formatted address
+- Use `<strong>` for company name
+- Use en-dash for phone number formatting
+
+**Success Criteria:**
+- Information displays on separate lines
+- Professional formatting
+- Proper use of text-level elements
+
+---
+
+## **Task 5: First Image**
+
+**Objective:** Insert an inline image with proper attributes.
+
+**Instructions:**
+1. Create a file called `first-image.html`
+2. Find or create an image file and save it in the `images` folder
+3. Create a page with:
+   - A heading
+   - A paragraph
+   - An image using `<img>` with:
+     - `src` pointing to your image
+     - Descriptive `alt` text
+     - `width` and `height` attributes
+
+**Example:**
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>My First Image</title>
+</head>
+<body>
+    <h1>Welcome to My Page</h1>
+    
+    <p>Check out this image:</p>
+    
+    <img src="images/photo.jpg" 
+         alt="Descriptive text about the image" 
+         width="400" 
+         height="300" />
+    
+    <p>Description of the image...</p>
+</body>
+</html>
+```
+
+**Success Criteria:**
+- Image displays in browser
+- Alt text is descriptive and meaningful
+- Width and height are specified
+- Image path is correct
+
+---
+
+## **Task 6: Image Gallery with Figures**
+
+**Objective:** Create an image gallery using `<figure>` and `<figcaption>`.
+
+**Instructions:**
+1. Create a file called `gallery.html`
+2. Create a photo gallery page with:
+   - A main heading "Photo Gallery"
+   - At least 3 `<figure>` elements, each containing:
+     - An `<img>` tag
+     - A `<figcaption>` with a description
+
+**Template:**
+```html
+<main>
+    <h1>Photo Gallery</h1>
+    
+    <section>
+        <figure>
+            <img src="images/photo1.jpg" 
+                 alt="Description of photo 1" 
+                 width="300" 
+                 height="200" />
+            <figcaption>Caption for photo 1</figcaption>
+        </figure>
+        
+        <!-- Add more figures -->
+    </section>
+</main>
+```
+
+**Requirements:**
+- Minimum of 3 figures
+- Each image has meaningful alt text
+- Each caption describes the image
+- Semantic structure (use sections if organizing by theme)
+
+**Success Criteria:**
+- Images display with captions below them
+- Alt text and captions are different but complementary
+- Proper HTML structure
+
+---
+
+## **Task 7: Basic Links**
+
+**Objective:** Create internal navigation links.
+
+**Instructions:**
+1. Create THREE files: `home.html`, `about.html`, `contact.html`
+2. In each file, create:
+   - A header with site name
+   - Navigation with links to all three pages
+   - Main content area with unique content for each page
+   - Footer
+
+**home.html Navigation Example:**
+```html
+<nav>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+```
+
+**Requirements:**
+- All three pages link to each other
+- Links work when clicked
+- Consistent navigation on all pages
+- Each page has different content
+
+**Success Criteria:**
+- Can navigate between all pages by clicking links
+- Links change color when clicked (browser default)
+- No broken links
+
+---
+
+## **Task 8: Link Variations**
+
+**Objective:** Practice different types of links.
+
+**Instructions:**
+1. Create a file called `link-types.html`
+2. Create a page demonstrating:
+
+**External link (opens in new tab):**
+```html
+<a href="https://www.example.com" target="_blank">External Website</a>
+```
+
+**Link with title attribute:**
+```html
+<a href="page.html" title="Click to learn more">Learn More</a>
+```
+
+**Link to page section:**
+```html
+<!-- Create a section with id -->
+<section id="contact">
+    <h2>Contact Us</h2>
+</section>
+
+<!-- Link to that section -->
+<a href="#contact">Jump to Contact</a>
+```
+
+**Download link:**
+```html
+<a href="document.pdf" download>Download PDF</a>
+```
+
+**Requirements:**
+- At least one of each link type
+- External link opens in new tab
+- Section link jumps to correct location
+- Title attributes provide helpful information
+
+**Success Criteria:**
+- All link types work correctly
+- External links open in new tabs
+- Anchor links scroll to sections
+- Download attribute works (create a dummy file)
+
+---
+
+## **Task 9: Email and Phone Links**
+
+**Objective:** Create clickable email and phone links.
+
+**Instructions:**
+1. Create a file called `contact-links.html`
+2. Create a contact page with:
+
+**Email link:**
+```html
+<p>
+    Email us at: 
+    <a href="mailto:info@company.com">info@company.com</a>
+</p>
+```
+
+**Email with subject:**
+```html
+<p>
+    <a href="mailto:support@company.com?subject=Support Request">
+        Contact Support
+    </a>
+</p>
+```
+
+**Phone link:**
+```html
+<p>
+    Call us: 
+    <a href="tel:+15555551234">(555) 555-1234</a>
+</p>
+```
+
+**SMS link:**
+```html
+<p>
+    <a href="sms:+15555551234">Text Us</a>
+</p>
+```
+
+**Requirements:**
+- At least 2 email links (one with subject)
+- At least 2 phone links
+- At least 1 SMS link
+- Proper formatting of phone numbers
+
+**Success Criteria:**
+- Email links open email client
+- Subject pre-fills in email
+- Phone links work on mobile
+- SMS links open messaging app
+
+---
+
+## **Task 10: Image as Link**
+
+**Objective:** Make images clickable.
+
+**Instructions:**
+1. Create a file called `image-links.html`
+2. Create a page with:
+   - A logo image that links to home page
+   - Three thumbnail images that link to different pages
+   - Each image wrapped in an `<a>` tag
+
+**Example:**
+```html
+<header>
+    <a href="home.html">
+        <img src="images/logo.png" alt="Company Logo" width="200" height="100" />
+    </a>
+</header>
+
+<section>
+    <h2>Our Services</h2>
+    
+    <a href="service1.html">
+        <img src="images/service1.jpg" alt="Web Design Services" width="200" height="150" />
+    </a>
+    
+    <!-- More image links -->
+</section>
+```
+
+**Requirements:**
+- Logo links to home
+- At least 3 clickable images
+- Alt text describes each image
+- Images are properly sized
+
+**Success Criteria:**
+- Clicking images navigates to correct pages
+- Alt text is descriptive
+- No broken images or links
+
+---
+
+## **Task 11: Complete Restaurant Website**
+
+**Objective:** Build a multi-page restaurant website with all learned elements.
+
+**Instructions:**
+
+Create a restaurant website with FOUR pages:
+
+### **1. index.html (Home Page)**
+```html
+<header>
+    <a href="index.html">
+        <img src="images/logo.png" alt="Restaurant Logo" />
+    </a>
+    <h1>Restaurant Name</h1>
+</header>
+
+<nav>
+    <!-- Links to all 4 pages -->
+</nav>
+
+<main>
+    <section>
+        <h2>Welcome</h2>
+        <figure>
+            <img src="images/restaurant.jpg" alt="Restaurant interior" />
+            <figcaption>Our cozy dining room</figcaption>
+        </figure>
+        <p>Welcome message with <em>emphasized</em> and <strong>important</strong> text.</p>
+    </section>
+    
+    <section>
+        <h2>Featured Dishes</h2>
+        <!-- 3 dishes with images as links to menu page -->
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Restaurant Name</p>
+</footer>
+```
+
+### **2. menu.html (Menu Page)**
+- Navigation (consistent with home)
+- At least 3 sections (Appetizers, Entrees, Desserts)
+- Each section has:
+  - Heading
+  - Unordered list of items
+  - Prices using proper en-dash
+  - At least 2 images with figures
+
+### **3. about.html (About Page)**
+- Navigation
+- "Our Story" section with 2-3 paragraphs
+- "Meet the Chef" section with:
+  - Image of chef
+  - Biography with proper text-level elements
+- "Hours" section with description list
+
+### **4. contact.html (Contact Page)**
+- Navigation
+- Contact form introduction
+- Contact information:
+  - Address with line breaks
+  - Clickable phone number
+  - Clickable email address
+  - SMS link
+- Map or location image
+- Link to each section of page from top
+
+**Requirements Checklist:**
+- [ ] 4 complete, linked pages
+- [ ] Consistent navigation on all pages
+- [ ] At least 8 images total across all pages
+- [ ] Uses `<figure>` and `<figcaption>` at least 3 times
+- [ ] Email link with subject
+- [ ] Phone link in international format
+- [ ] SMS link
+- [ ] At least 5 different text-level elements used
+- [ ] At least 5 character entities used
+- [ ] Image links (clickable images)
+- [ ] Section links (jump to page sections)
+- [ ] External link (review site, social media)
+- [ ] Proper semantic HTML throughout
+
+**Success Criteria:**
+- All pages accessible from navigation
+- All links work correctly
+- Images display properly with alt text
+- Contact links functional
+- Professional appearance
+- Valid HTML structure
+
+---
+
+
+## **Task 12: Debugging Exercise**
+
+**Objective:** Find and fix link and image errors.
+
+**Instructions:**
+
+Copy this code into `debug-links.html` and fix all **10 errors**:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Debug Practice</title>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt=>
+        <h1>My Website</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a>
+            <li><a href="about.html">About</a></li>
+            <li><a ="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="welcome>
+            <h2>Welcome</h2>
+            <p>Check out our <a href="#services>services</a>.</p>
+        </section>
+        
+        <section id="services">
+            <h2>Our Services</h2>
+            <img src="images/service.jpg" width="300" height="200" />
+        </section>
+        
+        <section>
+            <h2>Contact</h2>
+            <p>Email: <a href="info@example.com">info@example.com</a></p>
+            <p>Phone: <a href="tel:555-1234">555-1234</a></p>
+        </section>
+    </main>
+    
+    <footer>
+        <p><a href="#top">Back to Top</a></p>
+    </footer>
+</body>
+</html>
+```
+
+**Questions to Answer:**
+1. List all errors found
+2. What are the corrected versions?
+3. Which errors would prevent links from working?
+4. Which errors would prevent images from displaying?
+5. Which errors are accessibility issues?
+
+---
+
+## **Common Mistakes to Avoid**
+
+- Forgetting alt attributes on images
+- Using vague alt text like "image" or "photo"
+- Writing "click here" instead of descriptive link text
+- Forgetting to close anchor tags
+- Using wrong quote marks around attributes
+- Incorrect file paths for images
+- Not using proper international format for phone links
+- Forgetting character entity semicolons
+- Using spaces in filenames or URLs
+- Not testing links before submitting
+
+---
+
+## **Best Practices Review**
+
+**Images:**
+- ✓ Always include alt attribute
+- ✓ Use descriptive, specific alt text
+- ✓ Optimize image file sizes
+- ✓ Use appropriate image formats
+- ✓ Include width and height when known
+
+**Links:**
+- ✓ Use descriptive link text
+- ✓ Test all links
+- ✓ Use relative paths for internal links
+- ✓ Open external links in new tabs
+- ✓ Indicate when links open new windows
+
+**Accessibility:**
+- ✓ Provide meaningful alternative text
+- ✓ Write self-explanatory link text
+- ✓ Define abbreviations
+- ✓ Ensure keyboard navigation works
+- ✓ Use semantic HTML
+
+---
+
+## **Next Steps**
+
+Once you've completed these exercises, you're ready for Lesson 4, where we'll explore:
+- CSS basics and styling
+- The box model
+- Colors and typography
+- Layout techniques
+- Responsive design principles
+
+Great work on completing the HTML fundamentals!
