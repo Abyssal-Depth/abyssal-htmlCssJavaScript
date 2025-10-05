@@ -42,7 +42,7 @@
 
 ### Step 3: Test It
 1. You should see an alert box - click OK
-2. Press F12 to open the console
+2. Press F12 to open the console or right-click and select `inspect`
 3. Look for your console messages
 4. See the text that JavaScript added to the page
 
@@ -146,12 +146,16 @@ console.log('Hello!');
 1. Create two files:
    - `external.html`
    - `script.js`
-
+   </br>
+   </br>
 2. In `external.html`:
    - Create a basic HTML structure
    - Link to `script.js` using a `<script src="">` tag
-   - Add a heading that says "External JavaScript"
+   - Add a heading that says "External JavaScript" </br>
 
+   **💡 Hint:** If you don't recall what the script should look like, review the lesson material again. 
+   </br>
+   </br>
 3. In `script.js`:
    - Add a comment at the top with your name
    - Use `console.log()` to display "External file loaded!"

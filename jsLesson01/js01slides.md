@@ -145,7 +145,7 @@ alert('Hello from external file!');
 
 ---
 
-## The Browser Console: Your Best Friend
+### Browser Console: Your Best Friend
 
 ### How to Open It
 
@@ -159,14 +159,7 @@ alert('Hello from external file!');
 
 * See `console.log()` messages
 * See errors when code breaks
-* Type JavaScript directly and test
 * Debug your programs
-
-👉 Try typing:
-
-```javascript
-console.log("Hello from console!");
-```
 
 ---
 
@@ -186,28 +179,20 @@ let age = 25;  // Store the user's age
 
 **Why use comments?**
 
-* Explain code
-* Leave notes for others
-* Disable code temporarily
-* Document functions
+Explain code  |  Leave notes for others
+Disable code temporarily  |  Document functions
 
 ---
 
 ## Summary
 
-* ✅ JavaScript makes web pages interactive
-* ✅ Three ways to add JavaScript (inline, internal, external)
-* ✅ Outputs: `alert()`, `console.log()`, `document.write()`
-* ✅ Browser console is key (F12)
-* ✅ Comments explain and document code
+✅ JavaScript makes web pages interactive
+✅ Three ways to add JS (inline, internal, external)
+✅ Outputs we looked at: `alert()`, `console.log()`, `document.write()`
+✅ Comments explain and document code
 
 ---
 
-## Next Lesson Preview
-
-👉 Variables: storing and working with information in JavaScript.
-
----
 
 ## Key Terms
 
