@@ -1,16 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My First JavaScript</title>
+  <meta charset="UTF-8" />
+  <title>DOM Basics Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 40px; }
+    h1 { margin-bottom: 0.25rem; }
+    .sub { color: #666; margin-top: 0; }
+    #demoCard {
+      border: 2px solid #0a7cff; border-radius: 12px; padding: 16px; max-width: 720px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    }
+    #intro {
+      padding: 10px 12px; border-radius: 10px; background: #f4f8ff; border: 1px dashed #bcd8ff;
+      transition: all .2s ease;
+    }
+    .btns { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 6px; }
+    button {
+      border: 1px solid #ccc; background: white; padding: 10px 14px; border-radius: 10px;
+      cursor: pointer; font-weight: 600;
+    }
+    button:hover { transform: translateY(-1px); }
+    small.hint { color: #666; display: block; margin-top: 6px; }
+    ul#notes { margin-top: 10px; }
+    .danger { border-color: #e00; color: #e00; }
+  </style>
 </head>
 <body>
-    <h1>Hello World</h1>
-    
-    <script>
-        // JavaScript code goes here
-        alert('Welcome to JavaScript!');
-    </script>
+  <h1>DOM Basics: Find → Change → Create</h1>
+  <p class="sub">A tiny lab to demonstrate the Document Object Model in action.</p>
+
+  <div id="demoCard">
+    <!-- The element we’ll target with JavaScript -->
+    <p id="intro">Welcome to JavaScript</p>
+
+    <div class="btns">
+      <button onclick="changeText()">Change Text</button>
+      <button onclick="changeStyle()">Change Style</button>
+      <button onclick="addNote()">Create & Append Element</button>
+      <button onclick="resetDemo()">Reset</button>
+      <!-- Optional: show why document.write() is only for demos -->
+      <button class="danger" onclick="nukeWithDocumentWrite()">⚠ document.write()</button>
+    </div>
+
+    <small class="hint">
+      Open your browser <strong>Console</strong> (F12 / Cmd+Opt+I) to see logs from <code>console.log()</code>.
+    </small>
+
+    <ul id="notes"></ul>
+  </div>
+
+  <script>
+    // 1) Find the element in the DOM by its id attribute.
+    //    This gives us a *reference* to the live node the browser created from your HTML.
+    const intro = document.getElementById("intro");
+    const notes = document.getElementById("notes");
+
+    function changeText() {
+      // 2) Change its content safely (only this element updates).
+      intro.innerHTML = "✅ Changed with DOM! (via innerHTML)";
+      console.log("Changed #intro text with innerHTML");
+    }
+
+    function changeStyle() {
+      // 3) Modify style through the element's .style property.
+      intro.style.color = "#0a7cff";
+      intro.style.background = "#eaf3ff";
+      intro.style.border = "1px solid #0a7cff";
+      intro.style.fontWeight = "700";
+      console.log("Styled #intro via .style");
+    }
+
+    function addNote() {
+      // 4) Create a brand-new element and append it into the DOM tree.
+      const li = document.createElement("li");       // make a <li>
+      li.textContent = "New note added at " + new Date().toLocaleTimeString(); // set text safely
+      notes.appendChild(li);                         // attach it to <ul id="notes">
+      console.log("Appended a new <li> to #notes");
+    }
+
+    function resetDemo() {
+      // Restore original state.
+      intro.innerHTML = "Welcome to JavaScript";
+      intro.removeAttribute("style");
+      notes.innerHTML = "";
+      console.log("Demo reset to original state");
+    }
+
+    function nukeWithDocumentWrite() {
+      // 5) Demonstrate why document.write() is only for demos/testing:
+      //    If you call it *after* the page has loaded, it replaces the entire document.
+      document.write("<h2>⚠️ document.write() replaced the entire page.</h2><p>Refresh to get back to the demo.</p>");
+    }
+  </script>
 </body>
 </html>
-
-<button onclick="alert('Hello!')">Click Me</button>

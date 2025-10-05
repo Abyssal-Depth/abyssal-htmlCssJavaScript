@@ -75,7 +75,7 @@ Using the Script Tag `<script>`
     // JavaScript code goes here
     alert('Welcome to JavaScript!');
   </script>
-  
+
 </body>
 </html>
 ```
@@ -88,9 +88,10 @@ Using the Script Tag `<script>`
 
 ---
 
-### Method 3: External JavaScript File (Best Practice)
+### Method 3: External JavaScript File 
+(Best Practice)
 
-**index.html**
+**index.html** points to **script.js**
 
 ```html
 <!DOCTYPE html>
@@ -104,8 +105,6 @@ Using the Script Tag `<script>`
 </body>
 </html>
 ```
-
-**script.js**
 
 ```javascript
 alert('Hello from external file!');
@@ -141,7 +140,7 @@ alert('Hello from external file!');
 ### Three Ways to Output Information
 
 1. **`alert()`** – Popup box (blocks page)
-2. **`console.log()`** – Writes to browser console (best for debugging!)
+2. **`console.log()`** – Writes to browser console 
 3. **`document.write()`** – Writes to page (only for testing)
 
 ---
