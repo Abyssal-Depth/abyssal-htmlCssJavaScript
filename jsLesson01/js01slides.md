@@ -160,6 +160,8 @@ alert('Hello from external file!');
 * See `console.log()` messages
 * See errors when code breaks
 * Debug your programs
+<br>
+**We will get into this more in a later lessons but for now we'll at least take a look and try a few things**
 
 ---
 

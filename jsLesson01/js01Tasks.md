@@ -46,7 +46,7 @@
 3. Look for your console messages
 4. See the text that JavaScript added to the page
 
-**✅ Checkpoint:** You should see an alert, console messages, and text added to your page.
+**Checkpoint:** You should see an alert, console messages, and text added to your page.
 
 ---
 
