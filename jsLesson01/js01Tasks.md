@@ -215,7 +215,7 @@ console.log('Hello!');
 - Look for missing semicolons
 - Read the console error messages carefully
 
-**✅ Success:** When fixed, you should see the alert, console message, and page text with no errors in the console.
+**Success:** When fixed, you should see the alert, console message, and page text with no errors in the console.
 
 ---
 
@@ -240,12 +240,18 @@ Create a complete introduction page with:
 - Log more detailed information to the console (like "Page loaded at [time]")
 
 ### Grading Yourself:
-- ✅ Alert works on page load
-- ✅ External JS file is properly linked
-- ✅ Content appears on the page
-- ✅ Console shows messages
-- ✅ Code has clear comments
-- ✅ No errors in the console
+- Alert works on page load
+- External JS file is properly linked
+- Content appears on the page
+- Console shows messages
+- Code has clear comments
+- No errors in the console
+
+
+### Submitting Your Work:
+- Create a new Repo in GitHub called SEWD1JavaScript
+- Ensure all of your files you've made for this task are in the same folder and push them all to the GitHub Repo you made
+- Submit a link to the public Repo in Google Classroom
 
 ---
 
