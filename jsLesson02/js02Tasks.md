@@ -59,7 +59,7 @@ Now change the variable values to your own information:
 - Change the other variables to match your info
 - Save and refresh to see your changes
 
-**✅ Checkpoint:** The page should display YOUR information.
+**Checkpoint:** The page should display YOUR information.
 
 ---
 
@@ -186,7 +186,9 @@ Score: 10
 Score: 15
 ```
 
-**💡 Hint:** You'll need three different elements on the page to show all three scores.
+**Hint:** You'll need three different elements on the page to show all three scores.
+
+**Another Hint:** The code to this one is at the end of this page. 
 
 ---
 
@@ -315,3 +317,49 @@ Write comments explaining why you used `const` for some variables and `let` for 
 ✅ `let age = "25";`
 
 ❌ Changing a const variable
+
+
+**Answer for Task 5:**
+
+```html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Variable Reassignment</title>
+</head>
+<body>
+  <h1>Task 5: Variable Reassignment</h1>
+
+  <!-- Display areas -->
+  <h2 id="initial"></h2>
+  <h2 id="updated"></h2>
+  <h2 id="final"></h2>
+
+  <script>
+    // Step 1: Create a variable called score and set it to 0
+    let score = 0;
+
+    // Step 2: Display the initial score and log to console
+    document.getElementById("initial").textContent = "Initial score: " + score;
+    console.log("Score:", score);
+
+    // Step 3: Add 10 to the score
+    score += 10;
+
+    // Step 4: Display the updated score and log to console
+    document.getElementById("updated").textContent = "Updated score: " + score;
+    console.log("Score:", score);
+
+    // Step 5: Add 5 more to the score
+    score += 5;
+
+    // Step 6: Display the final score and log to console
+    document.getElementById("final").textContent = "Final score: " + score;
+    console.log("Score:", score);
+  </script>
+</body>
+</html>
+
+```
