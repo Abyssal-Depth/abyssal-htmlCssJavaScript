@@ -76,6 +76,14 @@ Now change the variable values to your own information:
    - Your dream job (string)
    - Number of siblings you have (number)
 
+**Remember** data entry is like this 
+
+```js
+<script>
+let firstName = "Alex";
+</script>
+```
+
 3. Log each variable to the console with a label
 4. Use `typeof` to check and log the data type of each variable
 
@@ -120,7 +128,7 @@ Your output might be:
 - "Luna went to the forest."
 - "She discovered a magical key!"
 
-**✅ Success Criteria:**
+**Success Criteria:**
 - At least one sentence uses `+` concatenation
 - At least one sentence uses template literals with `${}`
 - Both sentences appear on the page
