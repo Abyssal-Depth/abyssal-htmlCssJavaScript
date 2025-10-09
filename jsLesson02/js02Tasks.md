@@ -69,23 +69,52 @@ Now change the variable values to your own information:
 
 ### Instructions:
 1. Create a file called `data-types.html`
-2. Create variables for:
+
+2. Create the webpage using the starter code below.
+
+3. Using Javascript, create variables for:
    - Your favorite food (string)
    - Your lucky number (number)
    - Whether you like pizza (boolean)
    - Your dream job (string)
    - Number of siblings you have (number)
 
-**Remember** data entry is like this 
+4. Log each variable to the console with a label
+5. Use `typeof` to check and log the data type of each variable
 
-```js
-<script>
-let firstName = "Alex";
-</script>
+### Starter Code:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Types Practice</title>
+</head>
+<body>
+    <h1>Data Types Practice</h1>
+    <p>Check the console (F12) to see your output!</p>
+    
+    <script>
+        // Create your variables here
+        let favoriteFood = "Pizza";
+        let luckyNumber = 7;
+        let likesPizza = true;
+        let dreamJob = ""; // Fill this in
+        let numSiblings = 0; // Fill this in
+        
+        // Log each variable with a label
+        console.log("Favorite food:", favoriteFood);
+        console.log("Type:", typeof favoriteFood);
+        
+        console.log("Lucky number:", luckyNumber);
+        console.log("Type:", typeof luckyNumber);
+        
+        // Add the rest of your console.log statements here
+        
+    </script>
+</body>
+</html>
 ```
-
-3. Log each variable to the console with a label
-4. Use `typeof` to check and log the data type of each variable
 
 ### Expected Console Output:
 ```
@@ -95,10 +124,13 @@ Lucky number: 7
 Type: number
 Likes pizza: true
 Type: boolean
-...
+Dream job: Barber
+Type: string
+Number of siblings: 2
+Type: number
 ```
 
-**💡 Hint:** Use console.log() for each variable, then console.log(typeof variableName) for each type.
+**Hint:** Use `console.log()` to display each variable, then `console.log(typeof variableName)` for each type.
 
 ---
 
@@ -117,14 +149,45 @@ Type: boolean
 3. Use concatenation (`+`) to create a sentence and display it in an h1 element
 4. Use a template literal to create a different sentence and display it in a p element
 
-### Example:
+### Starter Code:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Story Builder</title>
+</head>
+<body>
+    <h1 id="sentence1"></h1>
+    <p id="sentence2"></p>
+    
+    <script>
+        // Create your variables here
+        let character = "Luna";
+        let place = "forest";
+        let item = "key";
+        let action = "discovered";
+        
+        // Use + to concatenate (join strings together)
+        let firstSentence = character + " went to the " + place + ".";
+        document.getElementById('sentence1').textContent = firstSentence;
+        
+        // Use template literals with ${}
+        let secondSentence = `She ${action} a magical ${item}!`;
+        document.getElementById('sentence2').textContent = secondSentence;
+    </script>
+</body>
+</html>
+```
+
+### Example Output:
 If your variables are:
 - character = "Luna"
 - place = "forest"
 - item = "key"
 - action = "discovered"
 
-Your output might be:
+Your output will be:
 - "Luna went to the forest."
 - "She discovered a magical key!"
 
@@ -132,6 +195,8 @@ Your output might be:
 - At least one sentence uses `+` concatenation
 - At least one sentence uses template literals with `${}`
 - Both sentences appear on the page
+
+**💡 Challenge:** Try changing the variables to create your own unique story!
 
 ---
 
@@ -148,10 +213,46 @@ Your output might be:
    - City
    - Favorite hobby
 
-3. Create an HTML structure with 5 paragraph elements (each with an id)
-4. Use JavaScript to populate each paragraph with formatted information
+3. Use JavaScript to populate each paragraph with formatted information
 
-### Format:
+### Starter Code:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Info Card</title>
+</head>
+<body>
+    <h1>Personal Information</h1>
+    
+    <!-- These paragraph elements will be filled by JavaScript -->
+    <p id="name"></p>
+    <p id="email"></p>
+    <p id="phone"></p>
+    <p id="location"></p>
+    <p id="hobby"></p>
+    
+    <script>
+        // Create your variables here
+        let fullName = "Your Name Here";
+        let emailAddress = "your.email@example.com";
+        let phoneNumber = "555-0123";
+        let city = "Your City";
+        let favoriteHobby = "Your Hobby";
+        
+        // Use template literals to format and display
+        document.getElementById('name').textContent = `Name: ${fullName}`;
+        document.getElementById('email').textContent = `Email: ${emailAddress}`;
+        
+        // Complete the rest here...
+        
+    </script>
+</body>
+</html>
+```
+
+### Expected Output Format:
 ```
 Name: [Your Name]
 Email: [Your Email]
@@ -171,7 +272,7 @@ Hobby: [Your Hobby]
 ### Instructions:
 1. Create a file called `counter.html`
 2. Create a variable called `score` and set it to 0
-3. Create an h2 element with id "score"
+3. Create three h2 elements with ids
 4. Display the initial score on the page
 5. Log the score to console
 6. Add 10 to the score
@@ -179,6 +280,45 @@ Hobby: [Your Hobby]
 8. Log the updated score to console
 9. Add 5 more to the score
 10. Display and log the final score
+
+### Starter Code:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Variable Reassignment</title>
+</head>
+<body>
+    <h1>Score Tracker</h1>
+    
+    <h2 id="initial"></h2>
+    <h2 id="updated"></h2>
+    <h2 id="final"></h2>
+    
+    <script>
+        // Step 1: Create score variable
+        let score = 0;
+        
+        // Step 2: Display and log initial score
+        document.getElementById("initial").textContent = "Initial score: " + score;
+        console.log("Score:", score);
+        
+        // Step 3: Add 10 to score
+        score += 10;  // This means score = score + 10
+        
+        // Step 4: Display and log updated score
+        // Your code here...
+        
+        // Step 5: Add 5 more to score
+        // Your code here...
+        
+        // Step 6: Display and log final score
+        // Your code here...
+    </script>
+</body>
+</html>
+```
 
 ### Expected Page Display:
 ```
@@ -194,9 +334,9 @@ Score: 10
 Score: 15
 ```
 
-**Hint:** You'll need three different elements on the page to show all three scores.
+**Hint:** Use `score += 10` as shorthand for `score = score + 10`
 
-**Another Hint:** The code to this one is at the end of this page. 
+**Full Answer:** The complete code is at the end of this document if you get stuck!
 
 ---
 
@@ -215,10 +355,57 @@ Score: 15
 5. Comment out that line
 6. Change the `let` variables and display them
 
+### Starter Code:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Const vs Let</title>
+</head>
+<body>
+    <h1>Understanding Const and Let</h1>
+    <div id="output"></div>
+    
+    <script>
+        // Use const for values that won't change
+        const birthYear = 2005;  // Your birth year never changes
+        const hometown = "Springfield";  // Where you were born doesn't change
+        const schoolName = "Central High";
+        
+        // Use let for values that will change
+        let currentYear = 2025;  // The year keeps changing
+        let age = 20;  // Your age changes every year
+        let grade = 10;  // Your grade changes
+        
+        // Try to change a const - this will cause an ERROR!
+        // birthYear = 2006;  // Uncomment this line to see the error
+        
+        // Changing let variables is fine
+        age = 21;
+        grade = 11;
+        
+        // Display the information
+        let info = `
+            Birth Year: ${birthYear} (const - cannot change)<br>
+            Hometown: ${hometown} (const - cannot change)<br>
+            Current Age: ${age} (let - can change)<br>
+            Current Grade: ${grade} (let - can change)
+        `;
+        
+        document.getElementById('output').innerHTML = info;
+        
+        console.log("Birth Year:", birthYear);
+        console.log("Age:", age);
+    </script>
+</body>
+</html>
+```
+
 ### Challenge:
 Write comments explaining why you used `const` for some variables and `let` for others.
 
-**💡 Hint:** Use `const` for things that won't change (like where you were born) and `let` for things that will change (like your current grade).
+**Rule of Thumb:** Use `const` by default. Only use `let` if you know the value will change later.
 
 ---
 
@@ -260,13 +447,21 @@ Write comments explaining why you used `const` for some variables and `let` for 
 3. Find and fix ALL errors
 4. Code should run without any console errors
 
-### Errors to Find:
-- Variable naming errors
-- String quote errors
-- Const reassignment errors
-- Undefined variable errors
+### Errors to Find (5 total):
+- ❌ Variable naming error (spaces not allowed)
+- ❌ String quote error (mismatched quotes)
+- ❌ Const reassignment error (can't change const)
+- ❌ Variable naming error (can't start with number)
+- ❌ Undefined variable error (typo in variable name)
 
-**✅ Success:** Page displays the message correctly with no console errors.
+**Debugging Tips:**
+1. Look at the console errors - they tell you the line number!
+2. Check that variable names have no spaces
+3. Make sure quotes match at the beginning and end
+4. Remember: `const` variables cannot be changed
+5. Variable names cannot start with numbers
+
+**Success:** Page displays "Emma is 25 years old" with no console errors.
 
 ---
 
@@ -276,98 +471,161 @@ Write comments explaining why you used `const` for some variables and `let` for 
 
 ### Instructions:
 1. Create `madlib.html`
-2. Create at least 8 variables for different types of words:
-   - An adjective
-   - A noun
-   - A verb (past tense)
-   - A place
-   - An animal
-   - A number
-   - A color
-   - A person's name
-
+2. Create at least 8 variables for different types of words
 3. Create a silly story using all the variables
 4. Display the story on the page with proper formatting
-5. Add styling to make it look nice (use CSS in a `<style>` tag)
+5. Add styling to make it look nice
 
-### Example Story Template:
-"Once upon a time, [name] went to [place] and saw a [color] [animal]. The [animal] [verb] over to a [noun] and counted to [number]. It was very [adjective]!"
+### Starter Code:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mad Lib Story</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f0f8ff;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .story {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Mad Lib Story</h1>
+    <div class="story" id="storyOutput"></div>
+    
+    <script>
+        // CHANGE THESE variables to make them your own
+        const adjective = "sparkly";
+        const noun = "banana";
+        const verb = "danced";
+        const place = "the moon";
+        const animal = "penguin";
+        const number = 42;
+        const color = "purple";
+        const personName = "Bob";
+        
+        // Create your OWN NEW story using template literals.  Example: 
+        let story = `
+            <p>Once upon a time, ${personName} went to ${place} and saw a 
+            ${color} ${animal}.</p>
+            
+            <p>The ${animal} ${verb} over to a ${adjective} ${noun} and 
+            counted to ${number}.</p>
+            
+            <p>It was very ${adjective}!</p>
+        `;
+        
+        // Display the story
+        document.getElementById('storyOutput').innerHTML = story;
+        
+        // Also log to console
+        console.log("Story:", story);
+    </script>
+</body>
+</html>
+```
+
+### Your Turn:
+1. Change all the variable values to create YOUR own story
+2. Add more variables if you want
+3. Make your story longer and funnier!
+4. Try using both `const` and `let` where appropriate
 
 ### Bonus Challenges:
-- Create multiple paragraphs for your story
-- Use both concatenation and template literals
-- Add a title to your story
-- Log the full story to the console as well
-- Make some variables `const` and others `let` (think about which should be which)
+- ✨ Add more paragraphs to your story
+- ✨ Use both concatenation (`+`) and template literals (`${}`)
+- ✨ Add more CSS styling
+- ✨ Create a title variable for your story
+- ✨ Add an image or emoji
 
 ### Grading Yourself:
 - ✅ At least 8 different variables
 - ✅ Story makes sense (even if silly!)
 - ✅ All variables are displayed on the page
 - ✅ No errors in console
-- ✅ Used proper variable naming conventions
+- ✅ Used proper variable naming conventions (camelCase)
 - ✅ Story is formatted nicely
 
 ---
 
 ## Tips for Success
 1. **Check your spelling** - Variable names must match exactly
-2. **Match your quotes** - Don't mix ' and "
+2. **Match your quotes** - Don't mix `'` and `"`
 3. **Use descriptive names** - `userName` is better than `x`
 4. **Test frequently** - Check the console after each change
 5. **Use const by default** - Only use let if the value will change
+6. **Save often** - Save your file before refreshing the browser
 
 ## Common Mistakes to Avoid
-❌ `let first name = "John";` - No spaces in names
+
+❌ `let first name = "John";` - No spaces in variable names  
 ✅ `let firstName = "John";`
 
-❌ `let age = "25;` - Mismatched quotes
+❌ `let age = "25;` - Mismatched quotes  
 ✅ `let age = "25";`
 
-❌ Changing a const variable
+❌ `let 1stPlace = "gold";` - Can't start with a number  
+✅ `let firstPlace = "gold";`
 
+❌ `const age = 20; age = 21;` - Can't change const  
+✅ `let age = 20; age = 21;`
 
-**Answer for Task 5:**
+---
+
+## Full Answer for Task 5:
 
 ```html
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Variable Reassignment</title>
+    <meta charset="UTF-8">
+    <title>Variable Reassignment</title>
 </head>
 <body>
-  <h1>Task 5: Variable Reassignment</h1>
+    <h1>Task 5: Variable Reassignment</h1>
 
-  <!-- Display areas -->
-  <h2 id="initial"></h2>
-  <h2 id="updated"></h2>
-  <h2 id="final"></h2>
+    <!-- Display areas -->
+    <h2 id="initial"></h2>
+    <h2 id="updated"></h2>
+    <h2 id="final"></h2>
 
-  <script>
-    // Step 1: Create a variable called score and set it to 0
-    let score = 0;
+    <script>
+        // Step 1: Create a variable called score and set it to 0
+        let score = 0;
 
-    // Step 2: Display the initial score and log to console
-    document.getElementById("initial").textContent = "Initial score: " + score;
-    console.log("Score:", score);
+        // Step 2: Display the initial score and log to console
+        document.getElementById("initial").textContent = "Initial score: " + score;
+        console.log("Score:", score);
 
-    // Step 3: Add 10 to the score
-    score += 10;
+        // Step 3: Add 10 to the score
+        score += 10;
 
-    // Step 4: Display the updated score and log to console
-    document.getElementById("updated").textContent = "Updated score: " + score;
-    console.log("Score:", score);
+        // Step 4: Display the updated score and log to console
+        document.getElementById("updated").textContent = "Updated score: " + score;
+        console.log("Score:", score);
 
-    // Step 5: Add 5 more to the score
-    score += 5;
+        // Step 5: Add 5 more to the score
+        score += 5;
 
-    // Step 6: Display the final score and log to console
-    document.getElementById("final").textContent = "Final score: " + score;
-    console.log("Score:", score);
-  </script>
+        // Step 6: Display the final score and log to console
+        document.getElementById("final").textContent = "Final score: " + score;
+        console.log("Score:", score);
+    </script>
 </body>
 </html>
-
 ```
