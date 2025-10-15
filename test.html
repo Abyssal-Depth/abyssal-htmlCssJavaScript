@@ -1,101 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Grade Calculator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 500px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        .container {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        input {
-            width: 100%;
-            padding: 12px;
-            font-size: 16px;
-            margin-bottom: 15px;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-        button {
-            width: 100%;
-            padding: 12px;
-            font-size: 18px;
-            background-color: #4caf50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        #result {
-            margin-top: 20px;
-            padding: 20px;
-            border-radius: 5px;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <title>Const vs Let</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Grade Calculator</h1>
-        <p>Enter your score (0-100):</p>
-        <input type="number" id="scoreInput" placeholder="Enter score">
-        <button id="calculateBtn">Calculate Grade</button>
-        <div id="result"></div>
-    </div>
+    <h1>Understanding Const and Let</h1>
+    <div id="output"></div>
     
     <script>
-        let input = document.getElementById('scoreInput');
-        let button = document.getElementById('calculateBtn');
-        let result = document.getElementById('result');
+        // Use const for values that won't change
+        const birthYear = 2005;  // Your birth year never changes
+        const hometown = "Springfield";  // Where you were born doesn't change
+        const schoolName = "Central High";
         
-        button.addEventListener('click', function() {
-            // Convert input to a number
-            let score = Number(input.value);
-            
-            // Validate input - check if score is in valid range
-            if (score < 0 || score > 100) {
-                result.textContent = 'Please enter a score between 0 and 100!';
-                result.style.backgroundColor = '#ffcdd2';
-                result.style.color = '#c62828';
-            }
-            // Check grade ranges - ORDER MATTERS! Start with highest
-            else if (score >= 90) {
-                result.textContent = 'Grade: A - Excellent! 🌟';
-                result.style.backgroundColor = '#c8e6c9';
-                result.style.color = '#2e7d32';
-            }
-            else if (score >= 80) {
-                result.textContent = 'Grade: B - Good Job! 👍';
-                result.style.backgroundColor = '#b3e5fc';
-                result.style.color = '#01579b';
-            }
-            else if (score >= 70) {
-                result.textContent = 'Grade: C - Not Bad! 📚';
-                result.style.backgroundColor = '#fff9c4';
-                result.style.color = '#f57f17';
-            }
-            else if (score >= 60) {
-                result.textContent = 'Grade: D - Needs Improvement 📖';
-                result.style.backgroundColor = '#ffe0b2';
-                result.style.color = '#e65100';
-            }
-            else {
-                result.textContent = 'Grade: F - Keep Trying! 💪';
-                result.style.backgroundColor = '#ffcdd2';
-                result.style.color = '#c62828';
-            }
-        });
+        // Use let for values that will change
+        let currentYear = 2025;  // The year keeps changing
+        let age = 20;  // Your age changes every year
+        let grade = 10;  // Your grade changes
+        
+        // Try to change a const - this will cause an ERROR!
+        // birthYear = 2006;  // Uncomment this line to see the error
+        
+        // Changing let variables is fine
+        age = 21;
+        grade = 11;
+        
+        // Display the information
+        let info = `
+            Birth Year: ${birthYear} (const - cannot change)<br>
+            Hometown: ${hometown} (const - cannot change)<br>
+            Current Age: ${age} (let - can change)<br>
+            Current Grade: ${grade} (let - can change)
+        `;
+        
+        document.getElementById('output').innerHTML = info;
+        
+        console.log("Birth Year:", birthYear);
+        console.log("Age:", age);
     </script>
 </body>
 </html>
