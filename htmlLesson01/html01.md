@@ -1,7 +1,5 @@
 # HTML Basics Lesson Series
 
-I'll create a series of lessons based on the slides. Let me start with the first lesson:
-
 ---
 
 # **Lesson 1: Introduction to HTML and Document Structure**

@@ -2,7 +2,8 @@
 
 ## Project Overview
 
-You and your team will create a fun "About Us" page that shows information about each team member. You'll use JavaScript variables to store information and do some simple calculations to display interesting team stats!
+You and your team will create another "About Us" page that shows information about each team member - similar to our first website and our first data collection effort. However, this time you'll use JavaScript variables to store information and also use JavaScript to do some simple calculations to display interesting team stats!
+
 
 **Team Size:** 2 students
 
@@ -11,10 +12,10 @@ You and your team will create a fun "About Us" page that shows information about
 ## What You'll Learn
 
 - Working together on one shared project
-- Using variables to store real information
+- Using variables to store information
 - Doing simple calculations (adding, averaging, etc.)
-- Displaying information on a webpage
-- Making it look good with CSS
+- Displaying the stored information on a webpage
+- Making it look presentable with CSS
 
 ---
 
@@ -37,7 +38,7 @@ Everyone contributes! Here's how you might divide the work:
 - Choose colors and fonts
 - Make it look professional
 
-**Remember:** Everyone should write at least SOME JavaScript and add comments with your initials!
+**IMPORTANT:** Everyone should write at least SOME JavaScript!  Use live share in VS Code to split up the work.  For example, someone can plug in their variable values in a shared JavaScript file.  Someone could work on the CSS on their own too, and share the styling with their teammate who is working more on the HTML and JavaScript. 
 
 ---
 
@@ -45,7 +46,7 @@ Everyone contributes! Here's how you might divide the work:
 
 Your project MUST include:
 
-### For Each Team Member (pick at least 7 or go crazy with it):
+### For Each Team Member (fill the following in and pick at least two more of your own questions/answers):
 - [ ] First name
 - [ ] Age
 - [ ] Favorite video game
@@ -55,7 +56,7 @@ Your project MUST include:
 - [ ] Do they think pit bulls are scary? (Yes/No)
 - [ ] Kobe or LeBron?
 - [ ] What they'll be doing in 5 years
-- [ ] *Add your own questions too! Maybe how many of you have won knockout 😊*
+- [ ] *You must add at least two of your own questions! Maybe how many of you have won knockout 😊*
 
 ### Team Calculations (at least these 3):
 - [ ] Total combined age of team
@@ -64,7 +65,7 @@ Your project MUST include:
 - [ ] *Add more if you want!*
 
 ### Styling:
-- [ ] Custom colors and fonts
+- [ ] Custom colors and fonts (DO NOT use what is provided - make it look the way you'd style your own personal website - look around online for inspiration)
 - [ ] Each team member has their own styled section
 - [ ] Page looks organized and fun
 
@@ -92,6 +93,8 @@ Create three files:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Team Profile</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Change the font below called Nova Script!!! This isn't  great choice here from Google.  Also, remember to update the CSS file accordingly. -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nova+Script">
 </head>
 <body>
     <div class="container">
@@ -100,36 +103,36 @@ Create three files:
         <!-- Team Stats Section -->
         <div class="team-stats">
             <h2>Team Statistics</h2>
-            <p>Total Team Members: <span id="total-members">0</span></p>
-            <p>Combined Age: <span id="total-age">0</span> years</p>
-            <p>Average Age: <span id="average-age">0</span> years</p>
+            <p>Total Team Members: <span id="totalMembers">0</span></p>
+            <p>Combined Age: <span id="totalAge">0</span> years</p>
+            <p>Average Age: <span id="averageAge">0</span> years</p>
             <!-- Add more stats here! -->
         </div>
 
         <!-- Member 1 Section -->
         <div class="member-card">
-            <h2 id="member1-name">Name</h2>
-            <p><strong>🎂 Age:</strong> <span id="member1-age">0</span></p>
-            <p><strong>🎮 Favorite Video Game:</strong> <span id="member1-game">?</span></p>
-            <p><strong>🎵 Favorite Song/Artist:</strong> <span id="member1-music">?</span></p>
-            <p><strong>🍕 Best Food Ever Eaten:</strong> <span id="member1-bestfood">?</span></p>
-            <p><strong>🍔 Monday Night Dinner Spot:</strong> <span id="member1-restaurant">?</span></p>
-            <p><strong>🐕 Are Pit Bulls Scary?:</strong> <span id="member1-pitbull">?</span></p>
-            <p><strong>🏀 Kobe or LeBron?:</strong> <span id="member1-basketball">?</span></p>
-            <p><strong>🔮 In 5 Years I'll Be (doing what?):</strong> <span id="member1-future">?</span></p>
+            <h2 id="member1Name"></h2>
+            <p><strong>🎂 Age:</strong> <span id="member1Age"></span></p>
+            <p><strong>🎮 Favorite Video Game:</strong> <span id="member1Game"></span></p>
+            <p><strong>🎵 Favorite Song/Artist:</strong> <span id="member1Music"></span></p>
+            <p><strong>🍕 Best Food Ever Eaten:</strong> <span id="member1BestFood"></span></p>
+            <p><strong>🍔 Monday Night Dinner Spot:</strong> <span id="member1Restaurant"></span></p>
+            <p><strong>🐕 Are Pit Bulls Scary?:</strong> <span id="member1PitBull"></span></p>
+            <p><strong>🏀 Kobe or LeBron?:</strong> <span id="member1Basketball"></span></p>
+            <p><strong>🔮 In 5 Years I'll Be (doing what?):</strong> <span id="member1Future"></span></p>
         </div>
 
         <!-- Member 2 Section -->
         <div class="member-card">
-            <h2 id="member2-name">Name</h2>
-            <p><strong>🎂 Age:</strong> <span id="member2-age">0</span></p>
-            <p><strong>🎮 Favorite Video Game:</strong> <span id="member2-game">?</span></p>
-            <p><strong>🎵 Favorite Song/Artist:</strong> <span id="member2-music">?</span></p>
-            <p><strong>🍕 Best Food Ever Eaten:</strong> <span id="member2-bestfood">?</span></p>
-            <p><strong>🍔 Monday Night Dinner Spot:</strong> <span id="member2-restaurant">?</span></p>
-            <p><strong>🐕 Are Pit Bulls Scary?:</strong> <span id="member2-pitbull">?</span></p>
-            <p><strong>🏀 Kobe or LeBron?:</strong> <span id="member2-basketball">?</span></p>
-            <p><strong>🔮 In 5 Years I'll Be (doing what?):</strong> <span id="member2-future">?</span></p>
+            <h2 id="member2Name">Name</h2>
+            <p><strong>🎂 Age:</strong> <span id="member2Age">0</span></p>
+            <p><strong>🎮 Favorite Video Game:</strong> <span id="member2Game">?</span></p>
+            <p><strong>🎵 Favorite Song/Artist:</strong> <span id="member2Music">?</span></p>
+            <p><strong>🍕 Best Food Ever Eaten:</strong> <span id="member2BestFood">?</span></p>
+            <p><strong>🍔 Monday Night Dinner Spot:</strong> <span id="member2Restaurant">?</span></p>
+            <p><strong>🐕 Are Pit Bulls Scary?:</strong> <span id="member2PitBull">?</span></p>
+            <p><strong>🏀 Kobe or LeBron?:</strong> <span id="member2Basketball">?</span></p>
+            <p><strong>🔮 In 5 Years I'll Be (doing what?):</strong> <span id="member2Future">?</span></p>
         </div>
 
         <!-- Add Member 3 if you have 3 people! Just copy and paste a member-card section -->
@@ -326,8 +329,15 @@ let member1Future = "In college studying computer science";
 // MEMBER 2 VARIABLES
 // ============================================
 
-//Just copy from member 1 and change values: 
-
+let member2Name = "Jordan";
+let member2Age = 17;
+let member2Game = "Fortnite";
+let member2Music = "Taylor Swift";
+let member2BestFood = "Pizza";
+let member2Restaurant = "Five Guys";
+let member2PitBull = "They're adorable!";
+let member2Basketball = "Kobe";
+let member2Future = "Traveling the world";
 
 
 // ============================================
@@ -347,31 +357,38 @@ let averageAge = totalAge / totalMembers;
 // DISPLAY TEAM STATS
 // ============================================
 
-document.getElementById('total-members').textContent = totalMembers;
-document.getElementById('total-age').textContent = totalAge;
-document.getElementById('average-age').textContent = averageAge.toFixed(1);
+document.getElementById('totalMembers').textContent = totalMembers;
+document.getElementById('totalAge').textContent = totalAge;
+document.getElementById('averageAge').textContent = averageAge.toFixed(1);
 
 // ============================================
 // DISPLAY MEMBER 1
 // ============================================
 
-document.getElementById('member1-name').textContent = member1Name;
-document.getElementById('member1-age').textContent = member1Age;
-document.getElementById('member1-game').textContent = member1Game;
-document.getElementById('member1-music').textContent = member1Music;
-document.getElementById('member1-bestfood').textContent = member1BestFood;
-document.getElementById('member1-restaurant').textContent = member1Restaurant;
-document.getElementById('member1-pitbull').textContent = member1PitBull;
-document.getElementById('member1-basketball').textContent = member1Basketball;
-document.getElementById('member1-future').textContent = member1Future;
+document.getElementById('member1Name').textContent = member1Name;
+document.getElementById('member1Age').textContent = member1Age;
+document.getElementById('member1Game').textContent = member1Game;
+document.getElementById('member1Music').textContent = member1Music;
+document.getElementById('member1BestFood').textContent = member1BestFood;
+document.getElementById('member1Restaurant').textContent = member1Restaurant;
+document.getElementById('member1PitBull').textContent = member1PitBull;
+document.getElementById('member1Basketball').textContent = member1Basketball;
+document.getElementById('member1Future').textContent = member1Future;
 
 
 // ============================================
 // DISPLAY MEMBER 2
 // ============================================
 
-// again copy from member 1, but remember to change the element IDs: 'member2-name' etc.
-
+document.getElementById('member2Name').textContent = member2Name;
+document.getElementById('member2Age').textContent = member2Age;
+document.getElementById('member2Game').textContent = member2Game;
+document.getElementById('member2Music').textContent = member2Music;
+document.getElementById('member2BestFood').textContent = member2BestFood;
+document.getElementById('member2Restaurant').textContent = member2Restaurant;
+document.getElementById('member2PitBull').textContent = member2PitBull;
+document.getElementById('member2Basketball').textContent = member2Basketball;
+document.getElementById('member2Future').textContent = member2Future;
 
 
 // ============================================
