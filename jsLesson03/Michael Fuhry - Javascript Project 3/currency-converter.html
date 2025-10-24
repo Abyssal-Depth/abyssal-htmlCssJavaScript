@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .converter {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        .amount {
+            font-size: 24px;
+            color: #667eea;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .conversion {
+            font-size: 18px;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="converter">
+        <h1>Currency Converter</h1>
+        <div class="amount" id="usd"></div>
+        
+        <p class="conversion" id="btc"></p>
+        <p class="conversion" id="eth"></p>
+        <p class="conversion" id="usdt"></p>
+        <p class="conversion" id="gold"></p>
+    </div>
+    
+    <script>
+        // Starting amount in USD
+        let usdAmount = 100;
+        
+        // Conversion rates (as of this date and time)
+        let bitcoinRate = 0.0009074903847990641;
+        let etheriumRate = 0.02556021603494593;
+        let tetherRate = 99.98950110238425;
+        let goldRate = 0.0240442414041837;
+        
+        // Display USD amount
+        document.getElementById('usd').textContent = `$${usdAmount.toFixed(2)} USD equals:`;
+        
+        // Convert to Euros
+        let euros = usdAmount * euroRate;
+        document.getElementById('').textContent = `€${euros.toFixed(2)} EUR`;
+        
+        // Convert to British Pounds
+        // Calculate and display here...
+        
+        // Convert to Japanese Yen
+        // Calculate and display here...
+        
+        // Convert to Canadian Dollars
+        // Calculate and display here...
+        
+        console.log('USD:', usdAmount);
+        console.log('EUR:', euros);
+    </script>
+</body>
+</html>
